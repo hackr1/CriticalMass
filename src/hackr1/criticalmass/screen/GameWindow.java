@@ -1,7 +1,11 @@
 package hackr1.criticalmass.screen;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import hackr1.criticalmass.CriticalMass;
@@ -14,6 +18,10 @@ public class GameWindow extends JFrame {
 	public GameWindow(CriticalMass game) {
 		
 		this.setTitle("Critical Mass");
+		try {
+			this.setIconImage(ImageIO.read(new File("./assets/png/icon.png")));
+		} catch (IOException e) {
+		}
 		
 		//set window dimensions and center window
 		this.setSize(860, 520);
@@ -23,13 +31,22 @@ public class GameWindow extends JFrame {
 		this.setLocation(x, y);
 		
 		//display main menu
-		this.mainMenu = new MainMenu();
+		this.mainMenu = new MainMenu(this);
 		this.add(mainMenu);
+		
 		
 	}
 	
-
-
+	public void paintTiledBackground(BufferedImage tile) 
+	{
+			for(int x=0; x>=(this.getWidth()/8); x+=8)
+			{
+				for(int y=0; y>=(this.getHeight()/8); y+=8)
+				{
+					this.getGraphics().drawImage(tile, x, y, null);
+				}
+			}
+	}
 	
 
 }
