@@ -1,7 +1,6 @@
 package hackr1.criticalmass.screen;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -19,7 +18,7 @@ public class GameWindow extends JFrame {
 		this.setUndecorated(true);
 		this.setTitle("Critical Mass Launcher");
 		try {
-			this.setIconImage(ImageIO.read(new File("./assets/png/icon.png")));
+			this.setIconImage(ImageIO.read(new File(".texture/png/icon.png")));
 		} catch (IOException e) {
 		}
 		
@@ -40,6 +39,7 @@ public class GameWindow extends JFrame {
 	
 	public void quickstartSP()
 	{
+		@SuppressWarnings("unused")
 		GameScreenSP gameScreenSP = new GameScreenSP();
 		this.setVisible(false);
 	}

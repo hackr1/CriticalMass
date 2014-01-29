@@ -30,13 +30,13 @@ public class MainMenu extends JPanel implements ActionListener {
 		
 		
 		//preload buttons
-	    ImageIcon texplay = new ImageIcon("./assets/png/menu/play.png");
-	    ImageIcon texplayh = new ImageIcon("./assets/png/menu/playh.png");
-	    ImageIcon texoptions = new ImageIcon("./assets/png/menu/options.png");
-	    ImageIcon texoptionsh = new ImageIcon("./assets/png/menu/optionsh.png");
-	    ImageIcon texexitgame = new ImageIcon("./assets/png/menu/exitgame.png");
-	    ImageIcon texexitgameh = new ImageIcon("./assets/png/menu/exitgameh.png");
-	    ImageIcon texclose = new ImageIcon("./assets/png/menu/close.png");
+	    ImageIcon texplay = new ImageIcon("./texture/png/menu/play.png");
+	    ImageIcon texplayh = new ImageIcon("./texture/png/menu/playh.png");
+	    ImageIcon texoptions = new ImageIcon("./texture/png/menu/options.png");
+	    ImageIcon texoptionsh = new ImageIcon("./texture/png/menu/optionsh.png");
+	    ImageIcon texexitgame = new ImageIcon("./texture/png/menu/exitgame.png");
+	    ImageIcon texexitgameh = new ImageIcon("./texture/png/menu/exitgameh.png");
+	    ImageIcon texclose = new ImageIcon("./texture/png/menu/close.png");
 	    
 	    //display buttons
 		play = new JButton(texplay);
@@ -89,7 +89,7 @@ public class MainMenu extends JPanel implements ActionListener {
 	    try{
 	    
 	    //paint background
-	    BufferedImage tile = ImageIO.read(new File("./assets/png/menu/bg.png"));
+	    BufferedImage tile = ImageIO.read(new File("./texture/png/menu/bg.png"));
 	    int bgx = 6;
 	    int bgy = 6;
 	    while (bgx <= (this.getWidth()))
@@ -104,16 +104,16 @@ public class MainMenu extends JPanel implements ActionListener {
 	    }
 	    
 	    //paint border
-	    BufferedImage bordervertical = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./assets/png/menu/border.png")), 6, 510);
+	    BufferedImage bordervertical = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./texture/png/menu/border.png")), 6, 510);
 		g.drawImage(bordervertical, 0, 0, null);
 		g.drawImage(bordervertical, this.getWidth() - 6, 0, null);
 	    
-		BufferedImage borderhorizontal = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./assets/png/menu/border.png")), 864, 6);
+		BufferedImage borderhorizontal = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./texture/png/menu/border.png")), 864, 6);
 		g.drawImage(borderhorizontal, 0, 0, null);
 		g.drawImage(borderhorizontal, 0, this.getHeight() - 6, null);
 		
 	    //paint headline
-	    BufferedImage headline = ImageIO.read(new File("./assets/png/menu/headline.png"));
+	    BufferedImage headline = ImageIO.read(new File("./texture/png/menu/headline.png"));
 	    g.drawImage(headline, 90, 0, null);
 	    
 	    }catch(IOException e){
