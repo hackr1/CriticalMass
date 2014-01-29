@@ -1,0 +1,17 @@
+Insert "jars" and "natives" folders here.
+
+content of "jars" folder:
+- jinput.jar (from the latest version of LWJGL)
+- lwjgl.jar (from the latest version of LWJGL)
+- slick.jar (from the latest version of Slick)
+
+content of "natives" folder:
+- linux (folder) (from the latest version of LWJGL)
+- windows (folder) (from the latest version of LWJGL)
+- macosx (folder) (from the latest version of LWJGL)
+
+These files are needed for the code in this repository
+to compile and run without errors.
+They can be downloaded at the following URLs:
+http://lwjgl.org/download.php (for lwjgl)
+http://slick.ninjacave.com/ (for slick)

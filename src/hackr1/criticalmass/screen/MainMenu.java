@@ -16,6 +16,7 @@ public class MainMenu extends JPanel implements ActionListener {
 	public JButton play;
 	public JButton options;
 	public JButton exitgame;
+	public JButton close;
 	
 	private GameWindow gameWindow;
 	
@@ -35,6 +36,7 @@ public class MainMenu extends JPanel implements ActionListener {
 	    ImageIcon texoptionsh = new ImageIcon("./assets/png/menu/optionsh.png");
 	    ImageIcon texexitgame = new ImageIcon("./assets/png/menu/exitgame.png");
 	    ImageIcon texexitgameh = new ImageIcon("./assets/png/menu/exitgameh.png");
+	    ImageIcon texclose = new ImageIcon("./assets/png/menu/close.png");
 	    
 	    //display buttons
 		play = new JButton(texplay);
@@ -70,6 +72,15 @@ public class MainMenu extends JPanel implements ActionListener {
 		this.add(exitgame);
 		exitgame.addActionListener(this);
 		
+		close = new JButton(texclose);
+		close.setOpaque(false);
+		close.setContentAreaFilled(false);
+		close.setBorderPainted(false);
+		close.setFocusPainted(false);
+		close.setSize(16, 16);
+		close.setLocation(836, 10);
+		this.add(close);
+		close.addActionListener(this);
 		
 	}
 	
@@ -78,9 +89,9 @@ public class MainMenu extends JPanel implements ActionListener {
 	    try{
 	    
 	    //paint background
-	    BufferedImage tile = ImageIO.read(new File("./assets/png/menu/bg.png"));;
-	    int bgx = 0;
-	    int bgy = 0;
+	    BufferedImage tile = ImageIO.read(new File("./assets/png/menu/bg.png"));
+	    int bgx = 6;
+	    int bgy = 6;
 	    while (bgx <= (this.getWidth()))
 	    {
 	    	while (bgy <= (this.getHeight()))
@@ -89,10 +100,18 @@ public class MainMenu extends JPanel implements ActionListener {
 	    		bgy += tile.getHeight();
 	    	}
 	    	bgx += tile.getWidth();
-	    	bgy = 0;
+	    	bgy = 6;
 	    }
-		
 	    
+	    //paint border
+	    BufferedImage bordervertical = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./assets/png/menu/border.png")), 6, 510);
+		g.drawImage(bordervertical, 0, 0, null);
+		g.drawImage(bordervertical, this.getWidth() - 6, 0, null);
+	    
+		BufferedImage borderhorizontal = hackr1.criticalmass.util.Util.resizeImage(ImageIO.read(new File("./assets/png/menu/border.png")), 864, 6);
+		g.drawImage(borderhorizontal, 0, 0, null);
+		g.drawImage(borderhorizontal, 0, this.getHeight() - 6, null);
+		
 	    //paint headline
 	    BufferedImage headline = ImageIO.read(new File("./assets/png/menu/headline.png"));
 	    g.drawImage(headline, 90, 0, null);
@@ -105,12 +124,17 @@ public class MainMenu extends JPanel implements ActionListener {
 	
 	 public void actionPerformed(ActionEvent e) { 
 	        
-		 if(e.getSource().equals(exitgame)){ 
+		 if(e.getSource().equals(exitgame) || e.getSource().equals(close)){ 
 	        	System.out.println("exiting game...");
 	            gameWindow.setEnabled(false);
 	            gameWindow.setVisible(false);
 	            System.out.println("game closed.");
 	            System.exit(0);
+	     } 
+		 if(e.getSource().equals(play)){ 
+	        	System.out.println("starting singleplayer game...");
+	        	this.setVisible(false);
+	            gameWindow.quickstartSP();
 	     } 
 	 }
 	

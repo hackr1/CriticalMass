@@ -16,15 +16,15 @@ public class GameWindow extends JFrame {
 	public JPanel mainMenu;
 	
 	public GameWindow(CriticalMass game) {
-		
-		this.setTitle("Critical Mass");
+		this.setUndecorated(true);
+		this.setTitle("Critical Mass Launcher");
 		try {
 			this.setIconImage(ImageIO.read(new File("./assets/png/icon.png")));
 		} catch (IOException e) {
 		}
 		
 		//set window dimensions and center window
-		this.setSize(860, 520);
+		this.setSize(864, 510);
 		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 		int x = (int) ((dimension.getWidth() - this.getWidth()) / 2);
 		int y = (int) ((dimension.getHeight() - this.getHeight()) / 2);
@@ -37,15 +37,11 @@ public class GameWindow extends JFrame {
 		
 	}
 	
-	public void paintTiledBackground(BufferedImage tile) 
+	
+	public void quickstartSP()
 	{
-			for(int x=0; x>=(this.getWidth()/8); x+=8)
-			{
-				for(int y=0; y>=(this.getHeight()/8); y+=8)
-				{
-					this.getGraphics().drawImage(tile, x, y, null);
-				}
-			}
+		GameScreenSP gameScreenSP = new GameScreenSP();
+		this.setVisible(false);
 	}
 	
 
