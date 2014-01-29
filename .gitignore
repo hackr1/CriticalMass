@@ -34,6 +34,8 @@ local.properties
 # PDT-specific
 .buildpath
 
+#Alex's build destination :)
+build/
 
 #################
 ## Visual Studio
