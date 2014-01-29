@@ -37,6 +37,10 @@ local.properties
 #Alex's build destination :)
 build/
 
+#Windows launchfile
+CriticalMass.exe
+CriticalMass.bat
+
 #################
 ## Visual Studio
 #################
