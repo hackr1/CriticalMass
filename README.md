@@ -3,11 +3,11 @@ Critical Mass
 
 "Critical Mass" is a computer game
 currently developed by Alexander Seitz
-aka "hackr1".
 
-"Critical Mass" will be a mix of classic
-2d RPG (like the early Pokémon or Final
-Fantasy games), Card Game, and Puzzle Game.
+
+"Critical Mass" will be a mix of a classical
+2d RPG (like the early PokÃ©mon or Final
+Fantasy games), and Puzzle Game.
 It is currently being developed as a
 Single Player game, but both a cooperative
 and a competitive multiplayer mode will
