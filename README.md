@@ -19,10 +19,10 @@ using Swing.
 
 This project is open source. (See 
 http://www.opensource.org for more 
-information about open source. It is
+information about open source.) It is
 being developed for fun and the authors
-do not intend to use it for any com-
-mercial purpose. The game is licensed
+do not intend to use it for any commercial
+purpose. The game is licensed
 under the Eclipse Public License (EPL),
 version 1.0, as published on this 
 web page:
