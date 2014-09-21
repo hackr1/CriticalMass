@@ -28,13 +28,3 @@ version 1.0, as published on this
 web page:
 http://www.eclipse.org/legal/epl-v10.html
 
-I am currently looking for talented
-people who would like to voluntarily
-participate in this project. If you
-are a programmer, graphics designer,
-voice actor, or sound designer, and if
-you are OK with the fact that this 
-is a hobby and I can't pay you for
-your help, please contact me via e-mail
-(alex.seitz1@gmx.net). I am sure you'll
-have a great time making a game with me!
